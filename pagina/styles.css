@@ -1,0 +1,57 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;            /* ajusta según el alto real */
+  background: rgb(102, 100, 100);
+  z-index: 1000;
+}
+
+
+body {
+  padding-top: 70px; /* Solo separa el contenido del menú */
+  padd
+}
+
+nav{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;                 /* Color del texto */
+  background-color: #444;      /* Fondo de los botones */
+  padding: 10px 20px;          /* Espaciado interior */
+  border-radius: 8px;          /* Bordes redondeados */
+  transition: background 0.3s; /* Animación suave */
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #eca023;   /* Color al pasar el cursor */
+  color: #000;                 /* Cambio de color del texto */
+}
+
+ul{
+  display: flex;
+  gap: 30px;
+}
+li {
+  list-style: none;
+}
+.contenedor {
+  display: flex;
+  align-items: center;     /* Alinea verticalmente */
+  gap: 20px;               /* Espacio entre imagen y texto */
+}
+
+.contenedor img {
+  width: 20rem;            /* Ajusta el tamaño según necesites */
+}
+
+.contenedor p {
+  margin: 0;
+  font-size: 60px;
+}
