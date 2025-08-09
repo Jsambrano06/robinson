@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/me.png">
     <title>Desarrolla</title>
 </head>
 <body>
     <header>
         <nav>
+            <div class="logo-contenedor">
+            <img src="img/portaf.png" alt="">
+            <h1>Desarrolla</h1>
+            </div>
             <ul>
                 <li><a href="quienesSomos.html">Quienes somos</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
@@ -16,12 +22,38 @@
         </nav>
     </header>
     <div class="contenedor">
-        <img src="https://e7.pngegg.com/pngimages/647/460/png-clipart-computer-icons-open-person-family-icon-black-silhouette-black-thumbnail.png" alt="">
+        <img src="img/me.png" alt="me">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit rerum quasi, libero recusandae veniam quisquam temporibus ipsa minus in enim iusto exercitationem! Quas odio est natus? Assumenda rerum magnam a?</p>
     </div>
-    <section>
-        
+    <section class="portafolios">
+        <h1>PORTAFOLIOS</h1>
+        <div class="portaf">
+        <img src="img/portaf.png" alt="portaf">
+        <img src="img/portaf.png" alt="portaf">
+        <img src="img/portaf.png" alt="portaf">
+        </div>
     </section>
+    </div>
+    <div class="pie">
+        <footer>
+        <p>Desarrolla &copy; 2025</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+        const nav = document.querySelector("nav");
 
+        window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            nav.style.top = "-100px"; // Ocultar al bajar
+        } else {
+            nav.style.top = "0"; // Mostrar al subir
+        }
+
+        lastScrollTop = scrollTop;
+        });
+
+    </script>
 </body>
 </html>

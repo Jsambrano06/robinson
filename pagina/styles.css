@@ -1,37 +1,46 @@
+body {
+  background: linear-gradient(145deg, #0A192F, #23243A);
+  padding-top: 60px; /* Aquí sí, para que el header fijo no lo tape */
+}
+
 header {
+  position: relative;
+  height: 77px;
+}
+
+nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;            /* ajusta según el alto real */
-  background: rgb(102, 100, 100);
+  height: 77px;
+  background-color: #070a31;
+  transition: top 0.3s ease;
   z-index: 1000;
-}
-
-
-body {
-  padding-top: 70px; /* Solo separa el contenido del menú */
-  padd
-}
-
-nav{
   display: flex;
-  justify-content: flex-end;
-  padding-right: 40px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
 }
+
+h1, p {
+  color: #c6dcff;
+}
+
 nav ul li a {
-  text-decoration: none;
-  color: #fff;                 /* Color del texto */
-  background-color: #444;      /* Fondo de los botones */
-  padding: 10px 20px;          /* Espaciado interior */
+  text-decoration: none;              /* Color del texto */
   border-radius: 8px;          /* Bordes redondeados */
-  transition: background 0.3s; /* Animación suave */
-  display: block;
+  background-color: #1E90FF;
+  color: #ffffffef;
+  padding: 8px 14px;
+  font-weight: 600;
 }
 
 nav ul li a:hover {
-  background-color: #eca023;   /* Color al pasar el cursor */
-  color: #000;                 /* Cambio de color del texto */
+  background-color: #0b4a81;   /* Color al pasar el cursor */
+  color: #000;        
+  cursor: pointer;
+  transition: background-color 0.4s ease-in;
 }
 
 ul{
@@ -43,15 +52,60 @@ li {
 }
 .contenedor {
   display: flex;
-  align-items: center;     /* Alinea verticalmente */
-  gap: 20px;               /* Espacio entre imagen y texto */
+  align-items: center;
+  gap: 20px;        
+  font-size: larger;
+  text-align: center;
+        
 }
 
 .contenedor img {
-  width: 20rem;            /* Ajusta el tamaño según necesites */
+  box-shadow: 4px 8px 20px 0px #33335e;
+  border-radius: 50%;
+  width: 25rem;
+  margin-left: 15px;
 }
 
-.contenedor p {
-  margin: 0;
-  font-size: 60px;
+.logo-contenedor {
+  display: flex;
+  align-items: center;
+}
+
+.logo-contenedor img {
+  width: 145px;
+  margin-left: -30px;
+}
+
+.logo-contenedor h1 {
+  font-size: 30px;
+  color: #ffffffef;
+}
+
+.portafolios h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.portaf {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.portaf img {
+  width: 20rem;
+  border: 4px solid #111873;
+  box-shadow: 0px 0px 30px 0px #000000cb;
+  background-color: #fff;
+}
+.pie footer {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #070a31;
+  color: #c6dcff;
+  margin-top: 70px;
 }

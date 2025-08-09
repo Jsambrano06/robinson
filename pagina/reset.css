@@ -1,0 +1,25 @@
+/* 1. Box-model sanitizado (¡Obligatorio!) */
+*, *::before, *::after {
+  box-sizing: border-box; /* El padding/borde no afectan el ancho/alto */
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. Body sin márgenes y tipografía base (¡Obligatorio!) */
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased; /* Texto nítido en macOS */
+}
+
+/* 3. Imágenes/bloques responsivos (¡Obligatorio!) */
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* 4. Formularios consistentes (¡Obligatorio!) */
+button, input, textarea, select {
+  font: inherit; /* Hereda fuente del body */
+}
