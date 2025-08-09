@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validar form </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #formulario {
+            border: black 2px solid;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        Nombre: <input type="text" id="nombre"><br><br>
+        correo: <input type="email" id="correo"><br><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <p id="mensaje"></p>
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Obtener los valores de los campos
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const mensaje = document.getElementById('mensaje');
+
+            // Validar que los campos no estén vacíos
+            if (nombre === '' || correo === '') {
+                mensaje.textContent = 'Por favor, completa todos los campos.';
+                mensaje.style.color = 'red';
+            } else {
+                mensaje.textContent = 'Formulario enviado correctamente.';
+                mensaje.style.color = 'green';
+            }
+        });
+    </script>
+</body>
+</html>
