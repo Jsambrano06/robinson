@@ -1,42 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Menu - Bleach Fan Page</title>
+    <title>Main Menu</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Fondo general */
+        body.main-menu {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: white;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* Contenedor principal */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* Encabezado */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: orange;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+        }
+
+        /* Menú */
+        menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        menu a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #222;
+            padding: 15px 20px;
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        menu a span {
+            background-color: orange;
+            color: black;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* Efecto hover */
+        menu a:hover {
+            background-color: #444;
+            transform: translateX(5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 500px) {
+            menu {
+                max-width: 100%;
+            }
+
+            menu a {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
+
 <body class="main-menu">
     <main>
         <header>
-            <h1>Bleach <span>Fan</span> Page</h1>
-            <h2>El mundo de los Shinigamis</h2>
-            <img src="images/ichigo-index.webp" alt="Ichigo Kurosaki">
-            <h3>By Esteban Reyes</h3>
         </header>
-        
+
         <menu>
             <a href="pagina/index.html">
                 <span>01</span>
-                Inicio
             </a>
             <a href="robinson-6t/09-08/index.html">
                 <span>02</span>
-                Personajes
             </a>
             <a href="robinson-6t/13-08/index.html">
                 <span>03</span>
-                Arcos
             </a>
             <a href="robinson-6t/index.html">
                 <span>04</span>
-                Galería
             </a>
             <a href="index.html#contacto">
                 <span>05</span>
-                Contacto
             </a>
         </menu>
     </main>
 </body>
+
 </html>
