@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bleach - Fan Page</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"/>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: #0a0a0a;
+      color: #fff;
+    }
+
+    /* Evita que el título quede oculto tras el navbar sticky al navegar por anclas */
+    .anchor-offset { scroll-margin-top: 80px; }
+
+    .carousel-item img {
+      height: 400px;           /* Ajusta si quieres */
+      object-fit: contain;     /* Mostrar imagen completa */
+      background-color: #000;  /* Relleno */
+    }
+
+    @media (max-width: 768px) {
+      .carousel-item img { height: 250px; }
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      border: none;
+    }
+    .card img {
+      height: 300px;
+      object-fit: cover;
+    }
+
+    #btnTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: orange;
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 50%;
+      display: none;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,.4);
+      z-index: 1050;
+    }
+    p, h5 {
+        color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid p-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">Bleach</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                aria-controls="navContent" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#personajes">Personajes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#arcos">Arcos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="text" placeholder="Buscar" aria-label="Buscar"/>
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header id="inicio" class="text-center py-4 anchor-offset">
+      <h1 class="text-warning">Bleach: El Mundo de los Shinigamis</h1>
+      <p class="lead">Explora la historia, los personajes y las batallas épicas de Ichigo Kurosaki y sus amigos.</p>
+    </header>
+
+    <!-- Carrusel -->
+    <div id="carouselBleach" class="carousel slide" data-bs-ride="carousel" aria-label="Galería principal">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselBleach" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselBleach" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselBleach" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/ichigo.jpg" class="d-block w-100" alt="Ichigo Kurosaki"/>
+          <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+            <h5>Ichigo Kurosaki</h5>
+            <p>El Shinigami sustituto que protege tanto a los vivos como a las almas.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/gotei13.webp" class="d-block w-100" alt="Gotei 13"/>
+          <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+            <h5>Gotei 13</h5>
+            <p>Las trece divisiones que mantienen el equilibrio entre mundos.</p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="img/hueco mundo.webp" class="d-block w-100" alt="Hueco Mundo"/>
+          <div class="carousel-caption bg-dark bg-opacity-50 p-2 rounded">
+            <h5>Hueco Mundo</h5>
+            <p>El reino habitado por Hollows y Arrancars.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselBleach" data-bs-slide="prev" aria-label="Anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselBleach" data-bs-slide="next" aria-label="Siguiente">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <!-- Sobre Bleach -->
+    <section class="container py-5">
+      <h2 class="text-warning">Sobre Bleach</h2>
+      <p>
+        <strong>Bleach</strong> es un manga y anime creado por Tite Kubo que narra las aventuras de
+        <em>Ichigo Kurosaki</em>, un adolescente con la capacidad de ver espíritus.
+        Tras recibir los poderes de una Shinigami llamada Rukia Kuchiki, Ichigo se ve envuelto en batallas contra Hollows y enemigos poderosos.
+      </p>
+    </section>
+
+    <!-- Personajes Destacados -->
+    <section id="personajes" class="container py-5 anchor-offset">
+      <h2 class="text-warning text-center mb-4">Personajes Destacados</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="img/ichigo.jpg" alt="Ichigo Kurosaki"/>
+            <div class="card-body">
+              <h5 class="card-title">Ichigo Kurosaki</h5>
+              <p class="card-text ">Shinigami sustituto con un gran sentido de la justicia.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="img/rukia.webp" alt="Rukia Kuchiki"/>
+            <div class="card-body">
+              <h5 class="card-title">Rukia Kuchiki</h5>
+              <p class="card-text">Shinigami de la 13ª división que entrega sus poderes a Ichigo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card text-center">
+            <img src="img/aizen.webp" alt="Aizen Sōsuke"/>
+            <div class="card-body">
+              <h5 class="card-title">Aizen Sōsuke</h5>
+              <p class="card-text">Ex-capitán del Gotei 13 y uno de los villanos más icónicos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabla de Arcos -->
+    <section id="arcos" class="container py-5 anchor-offset">
+      <h2 class="text-warning text-center mb-4">Principales Arcos</h2>
+      <table class="table table-dark table-hover text-center align-middle">
+        <thead>
+          <tr>
+            <th>Arco</th>
+            <th>Descripción</th>
+            <th>Año</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Sociedad de Almas</td>
+            <td>Rescate de Rukia y presentación del Gotei 13.</td>
+            <td>2005</td>
+          </tr>
+          <tr>
+            <td>Arrancar</td>
+            <td>Enfrentamientos contra los Espada en Hueco Mundo.</td>
+            <td>2007</td>
+          </tr>
+          <tr>
+            <td>Guerra Sangrienta</td>
+            <td>Batalla final contra el Wandenreich.</td>
+            <td>2022</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Video / Galería -->
+    <section id="galeria" class="container py-5 text-center anchor-offset">
+      <h2 class="text-warning mb-4">Trailer de Bleach</h2>
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.youtube.com/embed/WkNcS2mG_WU?si=aw8ea67xHL-6vcyR"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Formulario -->
+    <section id="contacto" class="container py-5 anchor-offset">
+      <h2 class="text-warning text-center mb-4">Únete a la Comunidad</h2>
+      <form class="bg-dark p-4 rounded">
+        <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" class="form-control" placeholder="Tu nombre"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Correo</label>
+          <input type="email" class="form-control" placeholder="tuemail@ejemplo.com"/>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Mensaje</label>
+          <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button class="btn btn-warning w-100" type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center py-3 mt-4">
+      <p class="mb-0">© 2025 Fan Page Bleach - Creado por Fans para Fans</p>
+    </footer>
+  </div>
+
+  <!-- Botón ir arriba -->
+  <button id="btnTop" title="Ir arriba" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+          crossorigin="anonymous"></script>
+
+  <script>
+    // Mostrar/ocultar botón "ir arriba"
+    const btnTop = document.getElementById('btnTop');
+    window.addEventListener('scroll', () => {
+      btnTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+  </script>
+</body>
+</html>
